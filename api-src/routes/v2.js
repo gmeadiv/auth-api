@@ -4,9 +4,23 @@ const express = require('express');
 const authRouter = express.Router();
 
 const { users } = require('../../auth-src/auth/models');
-const basicAuth = require('../../auth-src/auth/middleware/basic.js')
-const bearerAuth = require('../../auth-src/auth/middleware/bearer.js')
-const permissions = require('../../auth-src/auth/middleware/acl.js')
+const basicAuth = require('../../auth-src/auth/middleware/basic.js');
+const bearerAuth = require('../../auth-src/auth/middleware/bearer.js');
+const permissions = require('../../auth-src/auth/middleware/acl.js');
+
+
+
+authRouter.post('/signup', );
+authRouter.post('/signin', );
+
+authRouter.get('/users', );
+authRouter.get('/secret', );
+
+
+
+
+authRouter.put('/:model/:id', );
+authRouter.delete('/:model/:id', );
 
 authRouter.post('/signup', async (req, res, next) => {
   try {

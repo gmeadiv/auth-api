@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use(logger);
 
-app.use('/api/v1', v1Routes.handleGetAll);
+app.use('/api/v1', v1Routes);
 app.use('/api/v2', authRouter);
 
 
