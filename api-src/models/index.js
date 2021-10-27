@@ -1,8 +1,13 @@
 'use strict';
 
 const { Sequelize, DataTypes } = require('sequelize');
+
 const clothesModel = require('./clothes/model.js');
 const foodModel = require('./food/model.js');
+const userModel = require('./users/model.js');
+
+
+
 const Collection = require('./data-collection.js');
 
 require('dotenv').config();
@@ -10,11 +15,16 @@ require('dotenv').config();
 const DATABASE_URL = process.env.DATABASE_URL || 'sqlite:memory:';
 
 const sequelize = new Sequelize(DATABASE_URL);
+
 const clothes = clothesModel(sequelize, DataTypes);
 const food = foodModel(sequelize, DataTypes);
+const users = userModel(sequelize, DataTypes);
+
 
 module.exports = {
-  apiDB: sequelize,
+  db: sequelize,
   food: new Collection(food),
   clothes: new Collection(clothes),
+  users: new Collection(users),
+
 };
