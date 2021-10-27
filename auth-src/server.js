@@ -6,8 +6,8 @@ const cors = require('cors');
 const morgan = require('morgan');
 
 // Esoteric Resources
-const errorHandler = require('../../api-server/src/error-handlers/500.js');
-const notFound = require('../../api-server/src/error-handlers/500.js');
+const errorHandler = require('../api-src/error-handlers/500.js');
+const notFound = require('../api-src/error-handlers/500.js');
 const authRoutes = require('./auth/routes.js');
 
 // Prepare the express app
@@ -31,7 +31,7 @@ module.exports = {
   server: app,
   start: (port) => {
     app.listen(port, () => {
-      console.log(`Server Up on ${port}`);
+      console.log(`AUTH Server Up on ${port}`);
     });
   },
 };
