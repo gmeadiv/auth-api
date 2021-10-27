@@ -10,8 +10,6 @@ const logger = require('./middleware/logger.js');
 
 const v1Routes = require('./routes/v1.js');
 
-const PORT = process.env.PORT || 3002;
-
 const app = express();
 
 app.use(express.json());
