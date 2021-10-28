@@ -1,7 +1,5 @@
 'use strict';
 
-const user = require('../models/index.js')
-
 const permissions = (capability) => {
 
   return (req, res, next) => {

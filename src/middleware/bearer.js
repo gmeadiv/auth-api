@@ -4,8 +4,6 @@ const { users } = require('../models')
 
 module.exports = async (req, res, next) => {
 
-  console.log(req.headers.authorization, '<-- AUTHORIZATION --<<')
-
   try {
 
     if (!req.headers.authorization) { return _authError() }

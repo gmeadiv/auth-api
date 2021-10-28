@@ -26,5 +26,4 @@ module.exports = {
   food: new Collection(food),
   clothes: new Collection(clothes),
   users: new Collection(users),
-
 };
