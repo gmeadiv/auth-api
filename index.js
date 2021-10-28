@@ -1,7 +1,7 @@
 'use strict';
 
-const { db } = require('./api-src/models');
-const server = require('./api-src/server.js');
+const { db } = require('./src/models');
+const server = require('./src/server.js');
 
 require('dotenv').config();
 
